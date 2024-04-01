@@ -9,7 +9,7 @@ def main(cfg):
     from plot import AudioLogger, SaveEvery
     import warnings
     from pytorch_lightning.callbacks import ModelCheckpoint
-    from diffsynth.model import EstimatorSynth, EstimatorSynthFX
+    from diffsynth.model import EstimatorSynth
     from diffsynth.data import IdOodDataModule, MultiDataModule
     pl.seed_everything(cfg.seed, workers=True)
     warnings.simplefilter('ignore', RuntimeWarning)
