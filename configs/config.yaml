@@ -4,9 +4,9 @@ defaults:
   - _self_
   - trainer: default.yaml
   - model: default.yaml
-  - data: trainid.yaml
+  - data: wide.yaml
   - synth: h2of.yaml
-  - loss: switch_spec.yaml
+  - loss: switch_spec_orig.yaml
   - fx: null
   - experiment: null
   - exp: null

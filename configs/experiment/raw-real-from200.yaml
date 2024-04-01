@@ -7,7 +7,7 @@ defaults:
   - override /synth: h2of.yaml
   - override /loss: switch_spec_orig.yaml
 
-name: debugging
+name: raw-real-from200
 
 id_base: /dataset/ssssm-ddsp/gen-id
 
@@ -18,7 +18,7 @@ data:
     ood: 
       base_dir: /dataset/nsynth-train
   batch_size: 64
-  train_key: id
+  train_key: ood
 
 seed: 0
 ext_f0: false
@@ -26,3 +26,7 @@ ext_f0: false
 trainer:
   max_epochs: 400
   gradient_clip_val: 1.0
+
+hydra:
+  run:
+    dir: /exp_results/ssssm-ddsp/${name}/s${seed}

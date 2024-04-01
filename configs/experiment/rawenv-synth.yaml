@@ -4,10 +4,10 @@ defaults:
   - override /trainer: default.yaml
   - override /model: default.yaml
   - override /data: wide.yaml
-  - override /synth: h2of.yaml
+  - override /synth: h2of_env.yaml
   - override /loss: switch_spec_orig.yaml
 
-name: debugging
+name: rawenv-synth
 
 id_base: /dataset/ssssm-ddsp/gen-id
 
@@ -26,3 +26,7 @@ ext_f0: false
 trainer:
   max_epochs: 400
   gradient_clip_val: 1.0
+
+hydra:
+  run:
+    dir: /exp_results/ssssm-ddsp/${name}/s${seed}
